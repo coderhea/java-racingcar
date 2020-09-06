@@ -16,7 +16,7 @@ public class RacingRecord {
         return racingRecord;
     }
 
-    public static RacingRecord of(Cars cars) {
+    public static RacingRecord makeRacingRecordOf(Cars cars) {
         return new RacingRecord(cars.toRacingRecord());
     }
 
