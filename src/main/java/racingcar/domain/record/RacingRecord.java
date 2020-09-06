@@ -8,7 +8,7 @@ public class RacingRecord {
 
     private final Map<String, Integer> racingRecord;
 
-    RacingRecord(Map<String, Integer> racingRecord) {
+    public RacingRecord(Map<String, Integer> racingRecord) {
         this.racingRecord = racingRecord;
     }
 
