@@ -26,12 +26,11 @@ public class Cars {
     }
 
     public Map<String, Integer> toRacingRecord() {
-        return cars.stream()
-                .collect(Collectors.toMap(
-                        Car::getCarName,
-                        Car::getPosition,
-                        (first, second) -> first,
-                        LinkedHashMap::new));
+       Map<String, Integer> racingRecord = new LinkedHashMap<>();
+       for (Car car :cars) {
+           racingRecord.putAll(car.toMap());
+       }
+       return racingRecord;
     }
 
     public String findWinnersNames() {
